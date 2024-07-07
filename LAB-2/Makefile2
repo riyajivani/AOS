@@ -1,0 +1,10 @@
+all :object compile run
+object : subtract.c sum.c
+	@cc -c subtract.c
+	@cc -c sum.c
+compile : object
+	@cc subtract.o -o subtract.out
+	@cc sum.o -o sum.out
+run :
+	@./subtract.out
+	@./sum.out

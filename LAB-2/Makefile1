@@ -1,0 +1,8 @@
+try.o : try.c
+	cc -c try.c
+try.out : try.o
+	cc try.o -o try.out
+run : try.out
+	./try.out
+all : try.o try.out run
+	
